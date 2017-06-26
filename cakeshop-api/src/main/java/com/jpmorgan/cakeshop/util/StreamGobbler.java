@@ -25,7 +25,7 @@ public class StreamGobbler extends Thread {
 
     private StreamGobbler(InputStream stream) {
         this.stream = stream;
-        this.sw = new StringBuilderWriter();
+        this.sw = new StringBuilderWriter(256000);
         this.encoding = Charset.defaultCharset();
     }
 
